@@ -1,6 +1,6 @@
 # Container-Security-Assessment-for-a-Cloud-Native-Banking-Microservices-Architecture
 Objective:
-The objective of this container security assessment is to thoroughly evaluate the security of Docker containers and Kubernetes orchestration deployed in a cloud-native microservices architecture that supports a banking application. The assessment aims to identify vulnerabilities, misconfigurations, and potential security weaknesses that could compromise the confidentiality, integrity, or availability of sensitive banking data and services.
+The objective of this container security assessment is to thoroughly evaluate the security of Docker containers and Kubernetes orchestration deployed in a cloud-native microservices architecture that supports a banking application. The assessment aims to identify vulnerabilities, misconfigurations, and potential security weaknesses that could compromise the confidentiality, integrity, or availability of sensitive banking data and multiple services.
 
 Tasks:
 
