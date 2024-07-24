@@ -1,0 +1,98 @@
+Prerequisites
+
+Make sure you have Docker and Docker Compose installed on your system. You can install them following the official documentation for Docker and Docker Compose.
+Step 1: Set Up Juice Shop (OWASP Vulnerable Web Application)
+
+    Create a directory for your project:
+
+ 
+
+mkdir container-security-assessment
+cd container-security-assessment
+
+Create a Docker Compose file (docker-compose.yml):
+Create a file named docker-compose.yml and add the following content:
+
+yaml
+
+version: '3.8'
+services:
+  juiceshop:
+    image: bkimminich/juice-shop
+    ports:
+      - "3000:3000"
+
+This configuration uses the official Docker image for Juice Shop by Bjoern Kimminich and exposes port 3000.
+
+Run Juice Shop container:
+Open a terminal, navigate to your project directory (container-security-assessment) containing docker-compose.yml, and run the following command:
+
+
+
+docker-compose up -d
+
+This command pulls the Juice Shop image (if not already present) and starts the container in detached mode (-d).
+
+Access Juice Shop:
+Once the container is up and running, you can access Juice Shop in your web browser:
+
+
+
+    http://localhost:3000
+
+    Juice Shop is a vulnerable web application; explore its functionalities to find security issues.
+
+Step 2: Set Up Vulnerable Banking Application
+
+For a vulnerable banking application, we'll use an example that simulates common security vulnerabilities.
+
+    Create another Docker Compose file (docker-compose-banking.yml):
+    Create a file named docker-compose-banking.yml and add the following content:
+
+    yaml
+
+version: '3.8'
+services:
+  vulnerable-bank:
+    image: citizenstig/bank
+    ports:
+      - "4000:4000"
+
+This configuration uses a Docker image (citizenstig/bank) that simulates a vulnerable banking application, exposing it on port 4000.
+
+Run Vulnerable Banking container:
+In the same terminal or a new one (in the same directory), run:
+
+
+
+docker-compose -f docker-compose-banking.yml up -d
+
+This command pulls the vulnerable banking image (if not already present) and starts the container in detached mode.
+
+Access Vulnerable Banking Application:
+Once the container is running, access the vulnerable banking application in your web browser:
+
+
+
+    http://localhost:4000
+
+    Explore the application to identify and exploit security vulnerabilities.
+
+Step 3: Conduct Security Assessments
+
+With both Juice Shop and the vulnerable banking application running, you can now perform security assessments using various tools and techniques suitable for Docker container security, Kubernetes orchestration, and microservices architecture.
+Cleanup
+
+After completing your assessments, make sure to stop and remove the Docker containers:
+
+
+
+docker-compose down
+docker-compose -f docker-compose-banking.yml down
+
+This setup provides a controlled environment to practice container security assessments against typical cloud-native microservices scenarios, particularly focusing on banking applications. Adjust and enhance security measures based on your findings to improve the overall security posture.
+
+
+
+
+
