@@ -18,6 +18,8 @@ The objective of this container security assessment is to thoroughly evaluate th
     Network Policies:
         Examine Kubernetes Network Policies to verify that communication between microservices is restricted based on the principle of least privilege.
         Ensure that sensitive banking services are adequately protected from unauthorized access and that egress traffic is restricted as needed.
+        thanks for your colaboration!
+        
 
     Secrets Management:
         Evaluate the management of sensitive information such as API keys, database credentials, and encryption keys within Kubernetes Secrets.
