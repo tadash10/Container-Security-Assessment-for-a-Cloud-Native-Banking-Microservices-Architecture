@@ -1,4 +1,4 @@
-Contributing to AWS Security Checker
+Contributing to AWS Security Checker:
 
 We welcome contributions to improve AWS Security Checker. If you have any suggestions, bug fixes, or new feeatures, please follow the guidelines below:
 Issue Reporting
@@ -15,11 +15,12 @@ Pull Requests
     Write a clear and descriptive pull request (PR) description.
     Submit the PR for review.
 
-Code Style
+Code Style:
 
     Please adhere to the PEP 8 style guide for Python code.
     Use clear and meaningful variable and function names.
     Include docstrings for functions and classes.
+    notify
 
 License
 By contributing to this repository, you agree to release your contributions under the MIT License.
